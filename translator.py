@@ -52,7 +52,7 @@ def translate_to_brialle(text):
         elif char in specialchar_to_braille:
             result.append(specialchar_to_braille[char])
         else:
-            result.append("??????")
+            result.append("??????") # in case it is not include in the dictionary 
     return "".join(result)
 
 def translate_to_eng(text):
@@ -83,7 +83,7 @@ def translate_to_eng(text):
                 elif braille_word in braille_to_specchar:
                     result.append(braille_to_specchar[braille_word])
                 else:
-                    result.append(braille_to_specchar[braille_word])
+                    result.append("???") # in case it is not include in the dictionary 
                 isNum = False
 
     return "".join(result)
